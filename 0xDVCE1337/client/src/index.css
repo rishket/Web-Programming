@@ -1,0 +1,166 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 240 10% 4%; /* #0A0A0A */
+  --foreground: 0 0% 98%;
+  --muted: 240 4% 16%; /* #333333 */
+  --muted-foreground: 240 5% 65%;
+  --popover: 240 10% 4%;
+  --popover-foreground: 0 0% 98%;
+  --card: 240 6% 10%; /* #1A1A1A */
+  --card-foreground: 0 0% 98%;
+  --border: 240 4% 16%;
+  --input: 240 4% 16%;
+  --primary: 120 100% 50%; /* #00FF41 - Cyber Green */
+  --primary-foreground: 0 0% 0%;
+  --secondary: 195 100% 50%; /* #00D4FF - Cyber Blue */
+  --secondary-foreground: 0 0% 0%;
+  --accent: 260 90% 72%; /* #8B5CF6 - Cyber Purple */
+  --accent-foreground: 0 0% 98%;
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 60 9% 98%;
+  --ring: 120 100% 50%;
+  --radius: 0.5rem;
+}
+
+.dark {
+  --background: 240 10% 4%;
+  --foreground: 0 0% 98%;
+  --muted: 240 4% 16%;
+  --muted-foreground: 240 5% 65%;
+  --popover: 240 10% 4%;
+  --popover-foreground: 0 0% 98%;
+  --card: 240 6% 10%;
+  --card-foreground: 0 0% 98%;
+  --border: 240 4% 16%;
+  --input: 240 4% 16%;
+  --primary: 120 100% 50%;
+  --primary-foreground: 0 0% 0%;
+  --secondary: 195 100% 50%;
+  --secondary-foreground: 0 0% 0%;
+  --accent: 260 90% 72%;
+  --accent-foreground: 0 0% 98%;
+  --destructive: 0 62% 31%;
+  --destructive-foreground: 0 0% 98%;
+  --ring: 120 100% 50%;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Fira Code', monospace;
+  }
+}
+
+@layer utilities {
+  .font-mono {
+    font-family: 'Fira Code', monospace;
+  }
+
+  .text-glow {
+    text-shadow: 0 0 10px currentColor;
+  }
+
+  .neon-border {
+    border: 1px solid hsl(var(--primary));
+    box-shadow: 0 0 10px hsla(var(--primary), 0.3);
+    transition: all 0.3s ease;
+  }
+
+  .neon-border:hover {
+    box-shadow: 0 0 20px hsla(var(--primary), 0.6);
+  }
+
+  .neon-border-blue {
+    border: 1px solid hsl(var(--secondary));
+    box-shadow: 0 0 10px hsla(var(--secondary), 0.3);
+    transition: all 0.3s ease;
+  }
+
+  .neon-border-blue:hover {
+    box-shadow: 0 0 20px hsla(var(--secondary), 0.6);
+  }
+
+  .neon-border-purple {
+    border: 1px solid hsl(var(--accent));
+    box-shadow: 0 0 10px hsla(var(--accent), 0.3);
+    transition: all 0.3s ease;
+  }
+
+  .neon-border-purple:hover {
+    box-shadow: 0 0 20px hsla(var(--accent), 0.6);
+  }
+
+  .matrix-bg {
+    background: linear-gradient(45deg, hsl(var(--background)) 0%, hsl(var(--card)) 50%, hsl(var(--background)) 100%);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .matrix-bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+      radial-gradient(circle at 20% 50%, hsla(var(--primary), 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, hsla(var(--secondary), 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 40% 80%, hsla(var(--accent), 0.1) 0%, transparent 50%);
+    animation: pulse 4s ease-in-out infinite;
+  }
+
+  .cyber-green {
+    color: hsl(var(--primary));
+  }
+
+  .cyber-blue {
+    color: hsl(var(--secondary));
+  }
+
+  .cyber-purple {
+    color: hsl(var(--accent));
+  }
+}
+
+@keyframes glow {
+  0% { box-shadow: 0 0 5px currentColor, 0 0 10px currentColor, 0 0 15px currentColor; }
+  100% { box-shadow: 0 0 10px currentColor, 0 0 20px currentColor, 0 0 30px currentColor; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes matrix {
+  0% { transform: translateY(-100vh); }
+  100% { transform: translateY(100vh); }
+}
+
+.animate-glow {
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-matrix {
+  animation: matrix 20s linear infinite;
+}
+
+.radix-select-content {
+  z-index: 50 !important;
+}
