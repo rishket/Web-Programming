@@ -9,7 +9,7 @@ DB - PostgreSQL
 - cd 0xDVCE1337
 - npm install (if you already have node installed)
 - npm run dev
-- View in browser @ http://localhost:####
+- View in browser locally @ http://localhost:####
 
 ![Screenshot 2025-05-31 at 1 06 21 PM](https://github.com/user-attachments/assets/42c265ab-d35c-44dd-86d6-bf9b7249e12f)
 ![Screenshot 2025-05-31 at 1 21 06 PM](https://github.com/user-attachments/assets/401c7005-a1d9-4a0e-9cbf-0bb754ae5333)
