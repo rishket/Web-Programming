@@ -5,7 +5,9 @@ const { Pool } = pkg;
 
 const app = express();
 app.use(cors({
-  origin: "https://0xdvce1337.vercel.app"
+  origin: ["https://0xdvce1337.vercel.app", 
+           "https://0xdvce1337-git-main-0xdvce1337.vercel.app"
+           ]
 }));
 app.options("*", cors()); // Handles all OPTIONS requests
 
