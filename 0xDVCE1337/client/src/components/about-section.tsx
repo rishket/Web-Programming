@@ -54,7 +54,7 @@ export default function AboutSection() {
             viewport={{ once: true }}
           >
             <img
-              src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600"
+              src="https://imgs.search.brave.com/ATHVBlvlplgH4LaBvapfNUqBEX0WgJHBDee6l4jG7Us/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTM5/NzM5ODk1Ni9waG90/by9kaWdpdGFsLXNo/aWVsZC0zZC1yZW5k/ZXJpbmctc3RvY2st/cGhvdG8uanBnP3M9/NjEyeDYxMiZ3PTAm/az0yMCZjPXNkSGdT/ZnhMOVIxcEVhaE9X/YXprM2VIVTdjUGxa/dlpmbWlpRnRkd09k/Nzg9"
               alt="Cybersecurity team collaboration"
               className="rounded-xl shadow-2xl neon-border w-full h-auto"
             />
