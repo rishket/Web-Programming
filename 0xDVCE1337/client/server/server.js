@@ -5,8 +5,10 @@ const { Pool } = pkg;
 
 const app = express();
 app.use(cors({
-  origin: "https://0xdvce1337.vercel.app" 
+  origin: "https://0xdvce1337.vercel.app"
 }));
+app.options("*", cors()); // Handles all OPTIONS requests
+
 app.use(express.json());
 
 const pool = new Pool({
@@ -45,8 +47,6 @@ app.post("/api/contact", async (req, res) => {
 app.get("/", (req, res) => {
   res.send("0xDVCE1337's API is running!");
 });
-
-app.options("*", cors());
 
 const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
