@@ -5,9 +5,16 @@ const { Pool } = pkg;
 
 const app = express();
 app.use(cors({
-  origin: ["https://0xdvce1337.vercel.app", 
-           "https://0xdvce1337-git-main-0xdvce1337.vercel.app"
-           ]
+  origin: (origin, callback) => {
+    if (
+      !origin ||
+      origin.endsWith(".vercel.app")
+    ) {
+      callback(null, true);
+    } else {
+      callback(new Error("Not allowed by CORS"));
+    }
+  }
 }));
 app.options("*", cors()); // Handles all OPTIONS requests
 
