@@ -27,7 +27,7 @@ export default function ContactSection() {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch("https://web-programming-production-e310.up.railway.app/api/contact", {
+      const response = await fetch("https://web-programming-production-785d.up.railway.app/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
