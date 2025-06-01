@@ -40,6 +40,10 @@ app.post("/api/contact", async (req, res) => {
     }
 });
 
+app.get("/", (req, res) => {
+  res.send("0xDVCE1337 API is running!");
+});
+
 const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
     console.log(`API server running on port ${PORT}`);
