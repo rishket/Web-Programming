@@ -1,6 +1,8 @@
 # - 0xDVCE1337 - #
 
-Website I programmed for the Cybersecurity organization I founded at Diablo Valley College. Used React and TailwindCSS. 
+Website I programmed for the Cybersecurity organization I founded at Diablo Valley College. 
+Used React and TailwindCSS. 
+DB - PostgreSQL
 
 *To run on your machine:*
 - git clone https://github.com/rishket/Web-Programming/0xDVCE1337.git
