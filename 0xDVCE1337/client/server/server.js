@@ -5,7 +5,7 @@ const { Pool } = pkg;
 
 const app = express();
 app.use(cors({
-  origin: "https://0xdvce1337.vercel.app/" 
+  origin: "https://0xdvce1337.vercel.app" 
 }));
 app.use(express.json());
 
