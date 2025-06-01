@@ -1,8 +1,9 @@
 # - 0xDVCE1337 - #
 
 Website I programmed for the Cybersecurity organization I founded at Diablo Valley College. 
-Used React and TailwindCSS. 
-DB - PostgreSQL
+Front End: React/TailwindCSS/Node.js. 
+Back End - PostgreSQL/Railway
+URL: https://0xdvce1337.vercel.app/
 
 *To run on your machine:*
 - git clone https://github.com/rishket/Web-Programming/0xDVCE1337.git
