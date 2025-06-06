@@ -93,7 +93,7 @@ export default function ContactSection() {
                 <div className="space-y-4">
                   <div className="flex items-center space-x-4">
                     <Mail className="text-primary text-xl w-6 flex-shrink-0" />
-                    <span className="text-muted-foreground">k3rn3lp4nic@gmail.com</span>
+                    <span className="text-muted-foreground">mesa.cybersec@gmail.com</span>
                   </div>
                   <div className="flex items-center space-x-4">
                     <MapPin className="text-secondary text-xl w-6 flex-shrink-0" />
