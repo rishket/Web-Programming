@@ -49,7 +49,7 @@ export default function ContactSection() {
   };
 
   const socialLinks = [
-    { icon: SiInstagram, href: "#", color: "text-primary hover:text-white" },
+    /*{ icon: SiInstagram, href: "#", color: "text-primary hover:text-white" },*/
     { icon: SiDiscord, href: "https://discord.gg/Ae3ZUXP7", color: "text-secondary hover:text-white" },
     { icon: SiGithub, href: "https://github.com/rishket/0xDVCE1337", color: "text-accent hover:text-white" }
     // { icon: SiX, href: "#", color: "text-primary hover:text-white" },
@@ -107,7 +107,7 @@ export default function ContactSection() {
 
                 {/* Social Media Links */}
                 <div className="mt-8">
-                  <h4 className="text-xl font-mono font-semibold text-foreground mb-4">Follow Us</h4>
+                  <h4 className="text-xl font-mono font-semibold text-foreground mb-4">Contact Us</h4>
                   <div className="flex space-x-6">
                     {socialLinks.map((social, index) => (
                       <motion.a
